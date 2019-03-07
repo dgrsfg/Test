@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片剪切DEMO</title>
+	<style type="text/css">
+		body{background: #333;margin:0;padding:0;}
+		.box{
+			width:400px;
+			height: 300px;
+			position: absolute;
+			top:100px;
+			left:100px;
+		}
+		#img1{
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0.3;
+		}
+		#img2{
+			position: absolute;
+			top: 0;
+			left: 0;
+			clip: rect(50px,150px,150px,50px);
+		}
+		#main{
+			position: absolute;
+			top: 50px;
+			left: 50px;
+			border: 1px #000 solid;
+			width: 100px;
+			height: 100px;
+		}
+		.minDiv{
+			width: 8px;
+			height: 8px;
+			position: absolute;
+			background-color: #fff;
+		}
+		.minDiv.left-up{top:-4px;left: -4px;cursor:nw-resize;}
+		.minDiv.left{top:50%;margin-top:-4px;left: -4px;cursor:e-resize;}
+		.minDiv.left-down{bottom:-4px;left: -4px;cursor:sw-resize;}
+		.minDiv.top{top:-4px;left: 50%;margin-left:-4px;cursor:n-resize;}
+		.minDiv.right-up{top:-4px;right: -4px;cursor:ne-resize;}
+		.minDiv.right{top:50%;margin-top:-4px;right: -4px;cursor:e-resize;}
+		.minDiv.right-down{bottom:-4px;right: -4px;cursor:se-resize;}
+		.minDiv.bottom{bottom:-4px;left: 50%;margin-left:-4px;cursor:s-resize;}
+		#preimg{
+			position: absolute;
+			width:400px;
+			height:300px;
+			left:500px;
+			top:100px;
+		}
+		#img3{
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" class="box">
+		<img id = "img1" src="index.jpg">
+		<img id = "img2" src="index.jpg">
+		<div id="main">
+			<div id="left-up" class="minDiv left-up"></div>
+			<div id="left" class="minDiv left"></div>
+			<div id="left-down" class="minDiv left-down"></div>
+			<div id="up" class="minDiv top"></div>
+			<div id="right-up" class="minDiv right-up"></div>
+			<div id="right" class="minDiv right"></div>
+			<div id="right-down" class="minDiv right-down"></div>
+			<div id="down" class="minDiv bottom"></div>
+		</div>
+	</div>
+	<div id="preimg">
+		<img id = "img3" src="index.jpg">
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>
